@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2026喜迎新年 · 万事顺遂</title>
+    <style>
+        /* ========== 【核心自定义区 - 在这里修改你的新年背景！！！】 ========== */
+        :root {
+            /* 背景设置二选一，推荐两种方案，直接取消注释即可生效 */
+            /* 方案1：新年喜庆渐变背景（默认使用，推荐，无需图片） */
+            --bg-main: linear-gradient(120deg, #f82c2c, #ff8a00, #f82c2c);
+            
+            /* 方案2：新年喜庆背景图（取消下面注释即可切换，可替换成自己的新年背景图链接） */
+            /* --bg-main: url('https://img0.baidu.com/it/u=3204666232,1606222269&fm=253&fmt=auto&app=138&f=JPEG?w=800&h=1422'); */
+
+            --color-red: #e60012;    /* 主喜庆红 */
+            --color-gold: #ffd700;   /* 吉祥金 */
+            --color-white: #fff;     /* 纯净白 */
+            --shadow: 0 0 15px rgba(255,215,0,0.8); /* 金色光晕 */
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "微软雅黑", "宋体", sans-serif;
+        }
+
+        body {
+            width: 100%;
+            min-height: 100vh;
+            background: var(--bg-main);
+            background-size: cover;  /* 背景图自适应铺满 */
+            background-attachment: fixed; /* 背景固定，滚动页面不位移 */
+            background-repeat: no-repeat; /* 背景不重复 */
+            color: var(--color-white);
+            padding: 20px 0;
+            overflow-x: hidden;
+        }
+
+        /* 页面头部 新年标题区 */
+        .header {
+            text-align: center;
+            padding: 40px 20px;
+            margin-bottom: 30px;
+            animation: fadeIn 1s ease-in-out;
+        }
+        .header h1 {
+            font-size: 3.5rem;
+            color: var(--color-gold);
+            text-shadow: var(--shadow);
+            margin-bottom: 15px;
+        }
+        .header p {
+            font-size: 1.2rem;
+            font-weight: bold;
+            letter-spacing: 5px;
+        }
+        .year2026 {
+            font-size: 4rem;
+            color: var(--color-gold);
+            font-weight: 900;
+            margin: 0 10px;
+        }
+
+        /* 通用容器样式 */
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 20px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 20px;
+            border: 2px solid var(--color-gold);
+            box-shadow: 0 0 20px rgba(0,0,0,0.2);
+        }
+        .container h2 {
+            text-align: center;
+            color: var(--color-gold);
+            margin-bottom: 30px;
+            font-size: 2rem;
+            border-bottom: 2px solid var(--color-gold);
+            padding-bottom: 10px;
+        }
+
+        /* 新年图片展示区 - 多图排版+hover特效 */
+        .img-box {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+        .img-item {
+            width: 100%;
+            height: 280px;
+            border-radius: 15px;
+            overflow: hidden;
+            border: 2px solid var(--color-gold);
+            transition: all 0.5s ease;
+        }
+        .img-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        .img-item:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow);
+        }
+        .img-item:hover img {
+            transform: scale(1.1);
+        }
+
+        /* 新年视频展示区 - 多视频排版+自适应 */
+        .video-box {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 25px;
+        }
+        .video-item {
+            width: 100%;
+            border-radius: 15px;
+            overflow: hidden;
+            border: 2px solid var(--color-gold);
+        }
+        .video-item video {
+            width: 100%;
+            height: 240px;
+            object-fit: cover;
+            cursor: pointer;
+        }
+        .video-item p {
+            text-align: center;
+            padding: 10px;
+            font-size: 1rem;
+            color: var(--color-gold);
+            font-weight: bold;
+        }
+
+        /* 新年祝福区 - 积极向上主题 */
+        .blessing {
+            text-align: center;
+            padding: 30px;
+            font-size: 1.3rem;
+            line-height: 2;
+            letter-spacing: 3px;
+        }
+        .blessing strong {
+            color: var(--color-gold);
+            font-size: 1.5rem;
+        }
+
+        /* 动画效果 */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* 响应式适配 - 手机端自动缩放 */
+        @media (max-width: 768px) {
+            .header h1 { font-size: 2.2rem; }
+            .year2026 { font-size: 2.8rem; }
+            .container h2 { font-size: 1.6rem; }
+            .img-item { height: 220px; }
+            .video-item video { height: 200px; }
+        }
+    </style>
+</head>
+<body>
+    <!-- 头部标题 - 核心2026新年元素 -->
+    <div class="header">
+        <h1>喜迎<span class="year2026">2026</span>新年</h1>
+        <p>岁岁常欢愉 · 年年皆胜意</p>
+    </div>
+
+    <!-- 新年图片展示区 - 多张新年主题图片 -->
+    <div class="container">
+        <h2>新春美景 · 喜乐安康</h2>
+        <div class="img-box">
+            <div class="img-item"><img src="https://files.imagetourl.net/uploads/1768626841892-e69ed292-356c-4bf0-bf32-2a9cde538c6b.jpg" alt="新年灯笼"></div>
+            <div class="img-item"><img src="https://img0.baidu.com/it/u=221770277,3827923328&fm=253&fmt=auto&app=138&f=JPEG?w=800&h=500" alt="新年烟花"></div>
+            <div class="img-item"><img src="https://img0.baidu.com/it/u=3122772369,1260027223&fm=253&fmt=auto&app=138&f=JPEG?w=800&h=533" alt="新年春联"></div>
+            <div class="img-item"><img src="https://img0.baidu.com/it/u=2669772165,1997311622&fm=253&fmt=auto&app=138&f=JPEG?w=750&h=500" alt="新年团圆"></div>
+        </div>
+    </div>
+
+    <!-- 新年视频展示区 - 多段新年主题视频 -->
+    <div class="container">
+        <h2>新春喜乐 · 岁岁年年</h2>
+        <div class="video-box">
+            <div class="video-item">
+                <video src="https://vd3.bdstatic.com/mda-kgxq7u76d8v8w3y7/sc/cae_h264_nowatermark/1674997926647217439/mda-kgxq7u76d8v8w3y7.mp4?v_from_s=hkapp-haokan-tucheng&auth_key=1740000000-0-0-2998999a999999999999999999999999" controls="controls"></video>
+                <p>2026新年烟花盛典</p>
+            </div>
+            <div class="video-item">
+                <video src="https://vd3.bdstatic.com/mda-kj8896d7w9w9s76r/sc/cae_h264_nowatermark/1672500000000000000/mda-kj8896d7w9w9s76r.mp4?v_from_s=hkapp-haokan-tucheng&auth_key=1740000000-0-0-3998999a999999999999999999999999" controls="controls"></video>
+                <p>新春团圆贺岁短片</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 新年祝福区 - 积极向上主题文案 -->
+    <div class="container blessing">
+        <p>✨ <strong>2026新年寄语</strong> ✨</p>
+        <p>辞旧迎新，奔赴新程；心有光芒，万丈明朗</p>
+        <p>愿新年，胜旧年，岁岁长安宁，年年皆顺遂</p>
+        <p>所求皆如愿，所行皆坦途，一路向阳，万事可期！</p>
+    </div>
+
+    <script>
+        // 可选增强功能：页面加载完成后，图片和视频渐入显示
+        window.addEventListener('load', () => {
+            const allItems = document.querySelectorAll('.img-item, .video-item');
+            allItems.forEach((item, index) => {
+                setTimeout(() => {
+                    item.style.opacity = '1';
+                }, 200 * index);
+            });
+        });
+    </script>
+</body>
+</html>
