@@ -2,78 +2,181 @@
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <!-- 核心：手机适配，禁止缩放，设置视口 -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <title>这难道就是传说中的zjc</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>125F4集结地</title>
     <style>
-        /* 全局样式重置+粉色主背景 */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: "微软雅黑", "苹方", sans-serif;
+            font-family: "Microsoft YaHei", "PingFang SC", sans-serif;
         }
+
         body {
-            background-color: #ffeff7; /* 柔和浅粉色，不刺眼，适合手机长时间查看 */
-            color: #333; /* 深灰色文字，比纯黑更护眼 */
-            padding: 20px 15px; /* 手机端左右留边，上下留距 */
-            max-width: 750px; /* 适配大屏手机，不拉伸 */
-            margin: 0 auto; /* 页面居中 */
+            background: url("https://link.jiyiho.cn/orfile/view.php/c3f3eaadecf6987e5b06237a4d47e4a9.jpg") no-repeat center center fixed;
+            background-size: cover;
+            position: relative;
+            color: #fff;
+            padding: 40px 20px;
         }
 
-        /* 简介文字样式 */
-        .intro {
-            font-size: 16px;
-            line-height: 1.8; /* 行高拉大，手机阅读更舒适 */
-            text-align: justify; /* 文字两端对齐，更整洁 */
-            margin-bottom: 25px;
-            padding: 15px;
-            background-color: #fff; /* 白色底衬托文字，提升可读性 */
-            border-radius: 12px; /* 圆角，手机端更柔和 */
-            box-shadow: 0 2px 8px rgba(255, 105, 180, 0.1); /* 轻微阴影，有层次感 */
-        }
-
-        /* 图片样式：自适应手机宽度，不变形 */
-        .page-img {
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
             width: 100%;
-            height: auto; /* 宽高比自适应，防止图片拉伸 */
-            border-radius: 12px;
-            margin-bottom: 25px;
-            display: block; /* 消除图片底部默认空隙 */
+            height: 100%;
+            background: rgba(0, 17, 34, 0.6);
+            z-index: -1;
         }
 
-        /* 视频样式：和图片同尺寸，适配手机 */
-        .page-video {
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .main-title {
+            text-align: center;
+            font-size: 3rem;
+            margin-bottom: 50px;
+            color: #ffd700;
+            text-shadow: 0 0 15px rgba(0, 153, 204, 0.8), 0 0 30px rgba(0, 153, 204, 0.5);
+            letter-spacing: 3px;
+            font-weight: 700;
+        }
+
+        .member-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: center;
+            margin-bottom: 60px;
+        }
+
+        .member-card {
+            width: 260px;
+            background: rgba(0, 0, 0, 0.8);
+            border-radius: 16px;
+            overflow: hidden;
+            border: 2px solid #00ccff;
+            box-shadow: 0 0 20px rgba(0, 204, 255, 0.4);
+            transition: all 0.3s ease;
+        }
+
+        .member-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 0 30px rgba(255, 215, 0, 0.6);
+            border-color: #ffd700;
+        }
+
+        .member-img {
             width: 100%;
-            height: auto;
-            border-radius: 12px;
-            background-color: #f8d7e8; /* 视频加载时的浅粉背景，和整体协调 */
-            outline: none;
+            height: 320px;
+            object-fit: cover;
+            border-bottom: 3px solid #00ccff;
         }
 
-        /* 媒体查询：适配超小屏手机（如SE），微调间距 */
-        @media (max-width: 320px) {
-            body {
-                padding: 15px 10px;
+        .member-info {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .member-name {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: #ffd700;
+            font-weight: 600;
+        }
+
+        .member-desc {
+            font-size: 0.95rem;
+            color: #00ccff;
+            line-height: 1.6;
+        }
+
+        .summary {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 30px;
+            background: rgba(0, 0, 0, 0.85);
+            border: 2px solid #ffd700;
+            border-radius: 16px;
+            text-align: center;
+            box-shadow: 0 0 25px rgba(255, 215, 0, 0.3);
+        }
+
+        .summary-title {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            color: #00ccff;
+            font-weight: 600;
+        }
+
+        .summary-content {
+            font-size: 1.1rem;
+            color: #fff;
+            line-height: 1.8;
+        }
+
+        @media (max-width: 768px) {
+            .main-title {
+                font-size: 2.2rem;
             }
-            .intro {
-                font-size: 15px;
+            .member-list {
+                gap: 20px;
+            }
+            .member-card {
+                width: 220px;
+            }
+            .member-img {
+                height: 280px;
             }
         }
     </style>
 </head>
 <body>
-    <!-- 简介部分 -->
-    <div class="intro">
-        等出发的时候随手拍的，头发没特意打理，就这么自然垂着。笑起来眼睛弯成月牙，感觉今天的状态还挺松弛的，本人优点：可爱，美丽，乐观，开朗，傻
+    <div class="container">
+        <h1 class="main-title">125F4集结地</h1>
+
+        <div class="member-list">
+            <div class="member-card">
+                <img src="https://link.jiyiho.cn/orfile/view.php/2ea22c1f311a138e7d77b344f30bbec0.jpg" alt="张珈隽" class="member-img">
+                <div class="member-info">
+                    <h3 class="member-name">张珈隽</h3>
+                    <p class="member-desc">热爱《我的世界》，在方块的世界里搭建属于自己的青春王国，用创意和耐心建造无限可能。</p>
+                </div>
+            </div>
+
+            <div class="member-card">
+                <img src="https://link.jiyiho.cn/orfile/view.php/9f082ff9350b4c06ed489c916399e27c.jpg" alt="谢泓宇" class="member-img">
+                <div class="member-info">
+                    <h3 class="member-name">谢泓宇</h3>
+                    <p class="member-desc">沉迷《无畏契约》，在快节奏的对战中释放热血与活力，用精准操作诠释青春的无畏与冲劲。</p>
+                </div>
+            </div>
+
+            <div class="member-card">
+                <img src="https://link.jiyiho.cn/orfile/view.php/98ba11a886e7b80c4e26961d1ca0fd34.png" alt="赵柯浩" class="member-img">
+                <div class="member-info">
+                    <h3 class="member-name">赵柯浩</h3>
+                    <p class="member-desc">深爱《火影忍者》，在忍者的世界里追寻热血与羁绊，把青春的热血与坚持融入每一场战斗。</p>
+                </div>
+            </div>
+
+            <div class="member-card">
+                <img src="https://link.jiyiho.cn/orfile/view.php/5d820ede6ff7373878e95229c30f8d0a.jpg" alt="王思尧" class="member-img">
+                <div class="member-info">
+                    <h3 class="member-name">王思尧</h3>
+                    <p class="member-desc">痴迷《和平精英》，在海岛与沙漠中并肩作战，用默契配合书写青春的热血与兄弟情。</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="summary">
+            <h2 class="summary-title">青春集结</h2>
+            <p class="summary-content">125F4是彼此最好的兄弟，在日常里相伴同行，用热爱与默契诠释青春最鲜活的模样。不同的爱好，相同的热血，让他们的青春在并肩同行中闪闪发光，成为彼此最珍贵的青春印记。</p>
+        </div>
     </div>
-
-    <!-- 图片部分：替换src为你的图片地址即可 -->
-    <img src="https://link.jiyiho.cn/orfile/view.php/b5793990a3e352ef67d6ce621733b268.jpg" alt="展示图片" class="page-img">
-
-    <!-- 视频部分：支持本地视频/网络视频，替换src为你的视频地址 -->
-    <video src="https://link.jiyiho.cn/orfile/view.php/f4193546bb31c469af11e1dd3af46945.mp4" controls class="page-video">
-        你的浏览器不支持HTML5视频播放，请更换最新浏览器查看～
-    </video>
 </body>
 </html>
