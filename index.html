@@ -3,439 +3,692 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>125F4集结地</title>
+    <title>数字塑年韵 匠心传冀韵 - 束鹿战鼓调研</title>
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: "Microsoft YaHei", "PingFang SC", sans-serif;
+            font-family: "SimSun", "Microsoft Yahei", "SimHei", serif;
         }
 
         body {
-            background: url("https://link.jiyiho.cn/orfile/view.php/c3f3eaadecf6987e5b06237a4d47e4a9.jpg") no-repeat center center fixed;
-            background-size: cover;
-            position: relative;
-            color: #fff;
-            padding: 40px 20px;
-            /* 新增：给body加相对定位，作为视频按钮绝对定位的参照 */
-            position: relative;
-            /* 新增：底部留足间距，避免按钮遮挡内容 */
-            padding-bottom: 80px;
+            background-color: #f9f3e8;
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23d9c8b0' fill-opacity='0.1' fill-rule='evenodd'/%3E%3C/svg%3E");
+            color: #422811;
+            line-height: 1.8;
+            padding-top: 70px;
         }
 
-        body::before {
-            content: '';
+        .nav-menu {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
-            height: 100%;
-            background: rgba(0, 17, 34, 0.6);
-            z-index: -1;
+            background: linear-gradient(135deg, #7a3d17, #9c5823);
+            z-index: 999;
+            border-bottom: 2px solid #d4b483;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .nav-list {
+            display: flex;
+            flex-wrap: wrap;
+            list-style: none;
+            justify-content: center;
+            gap: 1.5rem;
+            padding: 0.8rem 0;
+        }
+
+        .nav-item a {
+            color: #fff9e8;
+            text-decoration: none;
+            font-size: 1rem;
+            padding: 0.5rem 0.8rem;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+            letter-spacing: 0.5px;
+        }
+
+        .nav-item a:hover {
+            background-color: rgba(255,249,232,0.2);
+            color: #fff;
+        }
+
+        header {
+            background: linear-gradient(135deg, #7a3d17, #9c5823, #7a3d17);
+            color: #fff9e8;
+            padding: 2rem 0;
+            text-align: center;
+            border-bottom: 3px solid #d4b483;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+            margin-top: 0 !important;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            letter-spacing: 2px;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            letter-spacing: 1px;
         }
 
         .container {
             max-width: 1200px;
             margin: 0 auto;
+            padding: 2rem;
         }
 
-        .main-title {
-            text-align: center;
-            font-size: 3rem;
-            margin-bottom: 20px;
-            color: #ffd700;
-            text-shadow: 0 0 15px rgba(0, 153, 204, 0.8), 0 0 30px rgba(0, 153, 204, 0.5);
-            letter-spacing: 3px;
-            font-weight: 700;
-        }
-
-        /* 原有：按钮容器 - 合照按钮单独居中 */
-        .btn-group {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 15px;
-            margin: 0 auto 40px;
-        }
-
-        /* 原有：弹出图片按钮样式，契合整体配色 */
-        .show-img-btn {
-            display: block;
-            width: 200px;
-            height: 50px;
-            line-height: 50px;
-            text-align: center;
-            background: linear-gradient(90deg, #00ccff, #0088cc);
-            color: #fff;
-            border: 2px solid #ffd700;
-            border-radius: 25px;
-            font-size: 1rem;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            outline: none;
-        }
-        .show-img-btn:hover {
-            background: linear-gradient(90deg, #ffd700, #ffb800);
-            border-color: #00ccff;
-            box-shadow: 0 0 15px rgba(255, 215, 0, 0.8);
-        }
-
-        /* 重点修改：视频按钮改为右下角固定 + 黑色系风格 */
-        .show-video-btn {
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            /* 黑色系配色：深灰黑背景，金色边框 */
-            background: rgba(30, 30, 30, 0.7);
-            color: #ffd700;
-            border: 1px solid #ffd700;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            outline: none;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 14px;
-            font-weight: bold;
-            /* 固定定位到右下角 */
-            position: fixed;
-            right: 20px;
-            bottom: 20px;
-            /* 提高层级，避免被遮挡 */
-            z-index: 99;
-        }
-        .show-video-btn:hover {
-            /* hover时加深黑色，金色高亮 */
-            background: #111;
-            color: #ffd700;
-            border-color: #00ccff;
-            box-shadow: 0 0 10px rgba(255, 215, 0, 0.8);
-            transform: scale(1.1);
-        }
-
-        /* 原有：图片弹窗遮罩层 - 全屏半透明，点击可关闭 */
-        .img-modal-mask {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.9);
-            z-index: 999;
-            display: none; /* 默认隐藏 */
-            justify-content: center;
-            align-items: center;
-            padding: 20px;
-        }
-        /* 原有：图片弹窗内容容器 */
-        .img-modal-content {
+        .research-section {
+            background-color: #fffbf5;
+            border: 1px solid #e0d0b8;
+            border-radius: 8px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 2px 10px rgba(120,80,40,0.08);
             position: relative;
-            max-width: 90%;
-            max-height: 90vh;
-            border-radius: 10px;
-            overflow: hidden;
-            border: 3px solid #ffd700;
+            scroll-margin-top: 80px;
         }
 
-        /* 原有：视频弹窗遮罩层 - 与图片弹窗层级一致，样式统一 */
-        .video-modal-mask {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.9);
-            z-index: 999;
-            display: none; /* 默认隐藏 */
-            justify-content: center;
-            align-items: center;
-            padding: 20px;
-        }
-        /* 原有：视频弹窗内容容器 - 适配视频比例，样式统一 */
-        .video-modal-content {
-            position: relative;
-            max-width: 90%;
-            max-height: 80vh;
-            border-radius: 10px;
-            overflow: hidden;
-            border: 3px solid #ffd700;
-        }
-        /* 原有：视频样式 - 自适应容器，不拉伸 */
-        .modal-video {
-            width: 100%;
-            height: 100%;
-            object-fit: contain;
-        }
-
-        /* 原有：弹窗关闭按钮（通用，图片/视频弹窗共用样式） */
-        .close-modal-btn {
+        .research-section::before {
+            content: "";
             position: absolute;
-            top: -15px;
-            right: -15px;
-            width: 40px;
-            height: 40px;
-            line-height: 40px;
-            text-align: center;
-            background: #000;
-            color: #ffd700;
-            border: 2px solid #ffd700;
-            border-radius: 50%;
-            font-size: 1.5rem;
-            font-weight: bold;
+            left: 15px;
+            top: 20px;
+            bottom: 20px;
+            width: 2px;
+            background: linear-gradient(to bottom, #c89f62, #e0d0b8, #c89f62);
+            border-radius: 1px;
+        }
+
+        .research-section h2 {
+            color: #7a3d17;
+            border-bottom: 2px dotted #d4b483;
+            padding-bottom: 0.8rem;
+            margin-bottom: 1.5rem;
+            margin-left: 10px;
+            font-size: 1.8rem;
+            letter-spacing: 1px;
+        }
+
+        .research-section p {
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+            text-indent: 2em;
+        }
+
+        .research-section ul {
+            margin-left: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .research-section li {
+            margin-bottom: 0.5rem;
+            font-size: 1.05rem;
+            list-style: square;
+            color: #5a3e2b;
+        }
+
+        /* 图片展示 - 中式相框质感 (新增轮播样式) */
+        .image-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .gallery-item {
+            border: 1px solid #d0b898;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(120,80,40,0.12);
+            transition: all 0.3s ease;
             cursor: pointer;
-            transition: all 0.2s ease;
+            background: #fff;
+            position: relative;
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(120,80,40,0.15);
+            border-color: #c89f62;
+        }
+
+        /* 轮播容器样式 */
+        .carousel-container {
+            width: 100%;
+            height: 220px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* 轮播图片列表 */
+        .carousel-slides {
+            display: flex;
+            transition: transform 0.5s ease;
+            height: 100%;
+        }
+
+        /* 轮播单张图片 */
+        .carousel-slide {
+            flex: 0 0 100%;
+            height: 100%;
+        }
+
+        .carousel-slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        /* 轮播控制按钮 */
+        .carousel-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 36px;
+            height: 36px;
+            background-color: rgba(122, 61, 23, 0.7);
+            color: #fff9e8;
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+            z-index: 10;
+            transition: background-color 0.3s ease;
+        }
+
+        .carousel-btn:hover {
+            background-color: rgba(122, 61, 23, 0.9);
+        }
+
+        .carousel-prev {
+            left: 10px;
+        }
+
+        .carousel-next {
+            right: 10px;
+        }
+
+        /* 轮播指示器 */
+        .carousel-indicators {
+            position: absolute;
+            bottom: 10px;
+            left: 0;
+            right: 0;
+            display: flex;
+            justify-content: center;
+            gap: 8px;
             z-index: 10;
         }
-        .close-modal-btn:hover {
-            background: #ffd700;
-            color: #000;
-            border-color: #00ccff;
-            box-shadow: 0 0 10px rgba(0, 204, 255, 0.8);
+
+        .indicator-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background-color: rgba(255, 249, 232, 0.5);
+            cursor: pointer;
+            transition: background-color 0.3s ease;
         }
 
-        /* 原有：弹窗图片样式 - 自适应，不拉伸 */
-        .modal-img {
-            width: 100%;
-            height: 100%;
-            object-fit: contain;
+        .indicator-dot.active {
+            background-color: #fff9e8;
+            width: 20px;
+            border-radius: 4px;
         }
 
-        .member-list {
+        .gallery-caption {
+            padding: 1rem;
+            background-color: #f9f3e8;
+            text-align: center;
+            font-size: 1rem;
+            color: #5a3e2b;
+            letter-spacing: 0.5px;
+            border-top: 1px solid #f0e6d8;
+        }
+
+        /* 传承人卡片 - 中式质感 */
+        .inheritor-showcase {
             display: flex;
             flex-wrap: wrap;
-            gap: 30px;
-            justify-content: center;
-            margin-bottom: 60px;
+            gap: 2rem;
+            margin: 2rem 0;
         }
 
-        .member-card {
-            width: 260px;
-            background: rgba(0, 0, 0, 0.8);
-            border-radius: 16px;
-            overflow: hidden;
-            border: 2px solid #00ccff;
-            box-shadow: 0 0 20px rgba(0, 204, 255, 0.4);
-            transition: all 0.3s ease;
-        }
-
-        .member-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 0 30px rgba(255, 215, 0, 0.6);
-            border-color: #ffd700;
-        }
-
-        .member-img {
-            width: 100%;
-            height: 320px;
-            object-fit: cover;
-            border-bottom: 3px solid #00ccff;
-        }
-
-        .member-info {
-            padding: 20px;
+        .inheritor-card {
+            flex: 1;
+            min-width: 250px;
+            background-color: #faf0e1;
+            border: 1px solid #e0d0b8;
+            border-top: 4px solid #7a3d17;
+            border-radius: 8px;
+            padding: 1.5rem;
             text-align: center;
+            box-shadow: 0 2px 6px rgba(120,80,40,0.06);
         }
 
-        .member-name {
-            font-size: 1.5rem;
-            margin-bottom: 10px;
-            color: #ffd700;
-            font-weight: 600;
+        .inheritor-card img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin: 0 auto 1rem;
+            border: 3px solid #e6d5b8;
+            cursor: pointer;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
 
-        .member-desc {
+        .inheritor-name {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #7a3d17;
+            margin-bottom: 0.5rem;
+            letter-spacing: 1px;
+        }
+
+        .inheritor-desc {
             font-size: 0.95rem;
-            color: #00ccff;
+            color: #665038;
             line-height: 1.6;
         }
 
-        .summary {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 30px;
-            background: rgba(0, 0, 0, 0.85);
-            border: 2px solid #ffd700;
-            border-radius: 16px;
+        /* 数据展示 - 中式底色 */
+        .data-showcase {
+            background-color: #faf0e1;
+            border: 1px solid #e0d0b8;
+            border-radius: 8px;
+            padding: 2rem;
+            margin: 2rem 0;
+        }
+
+        .data-title {
+            font-size: 1.3rem;
+            color: #7a3d17;
+            margin-bottom: 1.5rem;
             text-align: center;
-            box-shadow: 0 0 25px rgba(255, 215, 0, 0.3);
+            letter-spacing: 1px;
         }
 
-        .summary-title {
-            font-size: 1.8rem;
-            margin-bottom: 15px;
-            color: #00ccff;
-            font-weight: 600;
-        }
-
-        .summary-content {
+        .data-chart {
+            width: 100%;
+            height: 300px;
+            background-color: #fffbf5;
+            border: 1px dashed #c89f62;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #5a3e2b;
             font-size: 1.1rem;
-            color: #fff;
-            line-height: 1.8;
         }
 
+        /* 数字传承卡片 - 中式侧边栏 */
+        .digital-heritage {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            margin-top: 1.5rem;
+        }
+
+        .digital-card {
+            flex: 1;
+            min-width: 300px;
+            background-color: #faf0e1;
+            border-left: 4px solid #7a3d17;
+            border-radius: 6px;
+            padding: 1.5rem;
+            box-shadow: 0 2px 6px rgba(120,80,40,0.06);
+        }
+
+        .digital-card h3 {
+            color: #7a3d17;
+            margin-bottom: 1rem;
+            font-size: 1.4rem;
+            letter-spacing: 1px;
+        }
+
+        /* 点击放大图片样式 */
+        .img-modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.85);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s ease;
+        }
+
+        .img-modal.show {
+            opacity: 1;
+            pointer-events: all;
+        }
+
+        .img-modal img {
+            max-width: 90%;
+            max-height: 90%;
+            border-radius: 8px;
+            border: 4px solid #fff9e8;
+            box-shadow: 0 0 30px rgba(255,255,255,0.2);
+        }
+
+        /* 中式页脚 */
+        footer {
+            background: linear-gradient(135deg, #7a3d17, #9c5823);
+            color: #fff9e8;
+            text-align: center;
+            padding: 1.5rem 0;
+            margin-top: 2rem;
+            border-top: 3px solid #d4b483;
+            letter-spacing: 1px;
+        }
+
+        /* 响应式适配 */
         @media (max-width: 768px) {
-            .main-title {
-                font-size: 2.2rem;
+            body {
+                padding-top: 60px;
             }
-            .member-list {
-                gap: 20px;
+            .nav-list {
+                gap: 0.5rem;
+                padding: 0.5rem 0;
             }
-            .member-card {
-                width: 220px;
-            }
-            .member-img {
-                height: 280px;
-            }
-            /* 适配：合照按钮 */
-            .show-img-btn {
-                width: 160px;
-                height: 45px;
-                line-height: 45px;
+            .nav-item a {
                 font-size: 0.9rem;
+                padding: 0.4rem 0.6rem;
             }
-            /* 适配：右下角视频小按钮 */
-            .show-video-btn {
-                width: 35px;
-                height: 35px;
-                font-size: 12px;
-                right: 15px;
-                bottom: 15px;
+            header h1 { font-size: 2rem; }
+            .container { padding: 1rem; }
+            .data-chart { height: 200px; }
+            .research-section::before { display: none; }
+            .research-section h2 { margin-left: 0; }
+            .research-section {
+                scroll-margin-top: 70px;
             }
-            /* 适配：关闭按钮（通用） */
-            .close-modal-btn {
-                width: 35px;
-                height: 35px;
-                line-height: 35px;
-                font-size: 1.2rem;
-                top: -12px;
-                right: -12px;
+            /* 移动端轮播按钮调整 */
+            .carousel-btn {
+                width: 30px;
+                height: 30px;
+                font-size: 14px;
             }
         }
     </style>
 </head>
+
 <body>
-    <div class="container">
-        <h1 class="main-title">125F4集结地</h1>
-        
-        <!-- 按钮容器仅保留合照按钮 -->
-        <div class="btn-group">
-            <button class="show-img-btn">点击查看专属合照</button>
-        </div>
 
-        <!-- 新增：视频按钮移到body下，不再放在按钮组里 -->
-        <button class="show-video-btn">▶️</button>
-
-        <!-- 原有：图片弹窗（默认隐藏） -->
-        <div class="img-modal-mask">
-            <div class="img-modal-content">
-                <span class="close-modal-btn img-close">×</span>
-                <img src="https://link.jiyiho.cn/orfile/view.php/c3f3eaadecf6987e5b06237a4d47e4a9.jpg" alt="125F4专属合照" class="modal-img">
-            </div>
-        </div>
-
-        <!-- 原有：视频弹窗（默认隐藏），样式与图片弹窗统一 -->
-        <div class="video-modal-mask">
-            <div class="video-modal-content">
-                <span class="close-modal-btn video-close">×</span>
-                <!-- 👇 替换成你的视频链接 -->
-                <video src="https://link.jiyiho.cn/orfile/view.php/f4193546bb31c469af11e1dd3af46945.mp4" class="modal-video" controls preload="metadata"></video>
-            </div>
-        </div>
-
-        <div class="member-list">
-            <div class="member-card">
-                <img src="https://link.jiyiho.cn/orfile/view.php/2ea22c1f311a138e7d77b344f30bbec0.jpg" alt="张珈隽" class="member-img">
-                <div class="member-info">
-                    <h3 class="member-name">张珈隽</h3>
-                    <p class="member-desc">热爱《我的世界》，在方块的世界里搭建属于自己的青春王国，用创意和耐心建造无限可能。</p>
-                </div>
-            </div>
-
-            <div class="member-card">
-                <img src="https://link.jiyiho.cn/orfile/view.php/9f082ff9350b4c06ed489c916399e27c.jpg" alt="谢泓宇" class="member-img">
-                <div class="member-info">
-                    <h3 class="member-name">谢泓宇</h3>
-                    <p class="member-desc">沉迷《无畏契约》，在快节奏的对战中释放热血与活力，用精准操作诠释青春的无畏与冲劲。</p>
-                </div>
-            </div>
-
-            <div class="member-card">
-                <img src="https://link.jiyiho.cn/orfile/view.php/98ba11a886e7b80c4e26961d1ca0fd34.png" alt="赵柯浩" class="member-img">
-                <div class="member-info">
-                    <h3 class="member-name">赵柯浩</h3>
-                    <p class="member-desc">深爱《火影忍者》，在忍者的世界里追寻热血与羁绊，把青春的热血与坚持融入每一场战斗。</p>
-                </div>
-            </div>
-
-            <div class="member-card">
-                <img src="https://link.jiyiho.cn/orfile/view.php/5d820ede6ff7373878e95229c30f8d0a.jpg" alt="王思尧" class="member-img">
-                <div class="member-info">
-                    <h3 class="member-name">王思尧</h3>
-                    <p class="member-desc">痴迷《和平精英》，在海岛与沙漠中并肩作战，用默契配合书写青春的热血与兄弟情。</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="summary">
-            <h2 class="summary-title">青春集结</h2>
-            <p class="summary-content">125F4是彼此最好的兄弟，在日常里相伴同行，用热爱与默契诠释青春最鲜活的模样。不同的爱好，相同的热血，让他们的青春在并肩同行中闪闪发光，成为彼此最珍贵的青春印记。</p>
-        </div>
+<!-- 目录导航栏 -->
+<nav class="nav-menu">
+    <div class="nav-container">
+        <ul class="nav-list">
+            <li class="nav-item"><a href="#section1">调研背景</a></li>
+            <li class="nav-item"><a href="#section2">视觉展示</a></li>
+            <li class="nav-item"><a href="#section3">核心成果</a></li>
+            <li class="nav-item"><a href="#section4">数字传承</a></li>
+            <li class="nav-item"><a href="#section5">调研结论</a></li>
+        </ul>
     </div>
+</nav>
 
-    <script>
-        // ========== 原有：图片弹窗逻辑 ==========
-        const imgBtn = document.querySelector('.show-img-btn');
-        const imgMask = document.querySelector('.img-modal-mask');
-        const imgCloseBtn = document.querySelector('.img-close');
-        // 禁止/恢复滚动通用方法
-        const toggleBodyScroll = (isForbid) => {
-            document.body.style.overflow = isForbid ? 'hidden' : 'auto';
-        };
+<!-- 图片放大遮罩 -->
+<div class="img-modal" id="imgModal">
+    <img id="modalImg" src="">
+</div>
 
-        // 打开图片弹窗
-        imgBtn.addEventListener('click', () => {
-            imgMask.style.display = 'flex';
-            toggleBodyScroll(true);
-        });
-        // 关闭图片弹窗
-        const closeImgModal = () => {
-            imgMask.style.display = 'none';
-            toggleBodyScroll(false);
-        };
-        imgCloseBtn.addEventListener('click', closeImgModal);
-        imgMask.addEventListener('click', (e) => e.target === imgMask && closeImgModal());
+<header>
+    <h1>数字塑年韵 匠心传冀韵</h1>
+    <p>束鹿战鼓非遗文化调研报告</p>
+</header>
 
-        // ========== 原有：视频弹窗逻辑 ==========
-        const videoBtn = document.querySelector('.show-video-btn');
-        const videoMask = document.querySelector('.video-modal-mask');
-        const videoCloseBtn = document.querySelector('.video-close');
-        const modalVideo = document.querySelector('.modal-video');
+<div class="container">
 
-        // 打开视频弹窗
-        videoBtn.addEventListener('click', () => {
-            videoMask.style.display = 'flex';
-            toggleBodyScroll(true);
-            // 可选：打开弹窗时自动播放视频（需视频是同源/开启跨域）
-            // modalVideo.play().catch(err => console.log('自动播放失败：', err));
-        });
-        // 关闭视频弹窗（同时暂停视频，优化体验）
-        const closeVideoModal = () => {
-            videoMask.style.display = 'none';
-            toggleBodyScroll(false);
-            modalVideo.pause(); // 暂停视频
-        };
-        videoCloseBtn.addEventListener('click', closeVideoModal);
-        videoMask.addEventListener('click', (e) => e.target === videoMask && closeVideoModal());
+    <section class="research-section" id="section1">
+        <h2>一、调研背景与目的</h2>
+        <p>束鹿战鼓（辛集战鼓）是河北省省级非物质文化遗产，作为冀中平原最具代表性的民间鼓乐之一，承载着冀地人民的精神风貌和文化记忆。本次调研以"数字塑年韵，匠心传冀韵"为核心，旨在：</p>
+        <ul>
+            <li>梳理束鹿战鼓的历史脉络与艺术特征，挖掘其文化内核</li>
+            <li>调研束鹿战鼓的当代传承现状与面临的挑战</li>
+            <li>探索数字化手段在束鹿战鼓保护与传承中的应用路径</li>
+            <li>为冀派非遗文化的现代化传播提供实践参考</li>
+        </ul>
+    </section>
 
-        // ========== 通用：ESC键关闭任意弹窗 ==========
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape') {
-                if (imgMask.style.display === 'flex') closeImgModal();
-                if (videoMask.style.display === 'flex') closeVideoModal();
+    <!-- 视觉展示区域（核心修改部分） -->
+    <section class="research-section" id="section2">
+        <h2>二、束鹿战鼓视觉调研展示</h2>
+        <div class="image-gallery">
+            <!-- 第一个轮播项：束鹿战鼓表演现场 -->
+            <div class="gallery-item">
+                <div class="carousel-container" id="carousel1">
+                    <div class="carousel-slides">
+                        <div class="carousel-slide">
+                            <img src="https://q3.itc.cn/q_70/images03/20240701/3ca0435be42f4536add25ccc91600691.jpeg" alt="束鹿战鼓表演现场1" onclick="openImg(this.src)">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="https://q2.itc.cn/q_70/images03/20240701/90f70d909e3448cea8874e0cee09873c.jpeg" alt="束鹿战鼓表演现场2" onclick="openImg(this.src)">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="https://pic.cmc.hebtv.com/0/0d91d6cfb98f5b206ac1e752757fc5a9/2025/02/04/77da4dfac85a451b86573805d1034e78.JPG" alt="束鹿战鼓表演现场3" onclick="openImg(this.src)">
+                        </div>
+                    </div>
+                    <button class="carousel-btn carousel-prev" onclick="moveCarousel('carousel1', -1)">&lt;</button>
+                    <button class="carousel-btn carousel-next" onclick="moveCarousel('carousel1', 1)">&gt;</button>
+                    <div class="carousel-indicators">
+                        <span class="indicator-dot active" onclick="goToSlide('carousel1', 0)"></span>
+                        <span class="indicator-dot" onclick="goToSlide('carousel1', 1)"></span>
+                        <span class="indicator-dot" onclick="goToSlide('carousel1', 2)"></span>
+                    </div>
+                </div>
+                <div class="gallery-caption">束鹿战鼓节庆表演现场</div>
+            </div>
+
+            <!-- 第二个轮播项：束鹿战鼓制作工艺 -->
+            <div class="gallery-item">
+                <div class="carousel-container" id="carousel2">
+                    <div class="carousel-slides">
+                        <div class="carousel-slide">
+                            <img src="http://photocdn.sohu.com/20150116/mp687863_1421400487926_2.jpeg" alt="束鹿战鼓制作工艺1" onclick="openImg(this.src)">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="http://photocdn.sohu.com/20150116/mp687863_1421400487926_6.jpeg" alt="束鹿战鼓制作工艺2" onclick="openImg(this.src)">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="http://photocdn.sohu.com/20150116/mp687863_1421400487926_7.jpeg" alt="束鹿战鼓制作工艺3" onclick="openImg(this.src)">
+                        </div>
+                    </div>
+                    <button class="carousel-btn carousel-prev" onclick="moveCarousel('carousel2', -1)">&lt;</button>
+                    <button class="carousel-btn carousel-next" onclick="moveCarousel('carousel2', 1)">&gt;</button>
+                    <div class="carousel-indicators">
+                        <span class="indicator-dot active" onclick="goToSlide('carousel2', 0)"></span>
+                        <span class="indicator-dot" onclick="goToSlide('carousel2', 1)"></span>
+                        <span class="indicator-dot" onclick="goToSlide('carousel2', 2)"></span>
+                    </div>
+                </div>
+                <div class="gallery-caption">束鹿战鼓传统制作工艺</div>
+            </div>
+
+            <!-- 第三个轮播项：束鹿战鼓曲谱 -->
+            <div class="gallery-item">
+                <div class="carousel-container" id="carousel3">
+                    <div class="carousel-slides">
+                        <div class="carousel-slide">
+                            <img src="https://ss-mpvolc.meipian.me/users/44214831/35de2570-4dc1-11eb-b34d-65d07adddbcb__png.heic~tplv-s1ctq42ewb-s2-cC-q:750:0:0:0:q80.webp" alt="束鹿战鼓曲谱1" onclick="openImg(this.src)">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="https://ss-mpvolc.meipian.me/users/44214831/48984960-4fca-11eb-a1b1-2978489e3dc7__png.heic~tplv-s1ctq42ewb-s2-cC-q:750:0:0:0:q80.webp" alt="束鹿战鼓曲谱2" onclick="openImg(this.src)">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="https://ss-mpvolc.meipian.me/users/44214831/59671cd0-4fca-11eb-a1b1-2978489e3dc7__png.heic~tplv-s1ctq42ewb-s2-cC-q:750:0:0:0:q80.webp" alt="束鹿战鼓曲谱3" onclick="openImg(this.src)">
+                        </div>
+                    </div>
+                    <button class="carousel-btn carousel-prev" onclick="moveCarousel('carousel3', -1)">&lt;</button>
+                    <button class="carousel-btn carousel-next" onclick="moveCarousel('carousel3', 1)">&gt;</button>
+                    <div class="carousel-indicators">
+                        <span class="indicator-dot active" onclick="goToSlide('carousel3', 0)"></span>
+                        <span class="indicator-dot" onclick="goToSlide('carousel3', 1)"></span>
+                        <span class="indicator-dot" onclick="goToSlide('carousel3', 2)"></span>
+                    </div>
+                </div>
+                <div class="gallery-caption">束鹿战鼓经典曲谱手稿</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="research-section" id="section3">
+        <h2>三、束鹿战鼓核心调研成果</h2>
+        <h3 style="color:#5a3e2b; margin-left:10px;">3.1 历史渊源</h3>
+        <p>束鹿战鼓起源于明代，最初为军事演练、战场助威所用，后逐渐演变为民间节庆、祭祀的重要表演形式。历经数百年发展，形成了独具冀中特色的鼓乐体系，主要流传于河北省辛集市（原束鹿县）及周边区域。</p>
+
+        <h3 style="color:#5a3e2b; margin-top:1rem; margin-left:10px;">3.2 艺术特征</h3>
+        <ul>
+            <li><strong>乐器构成</strong>：以战鼓为主，搭配铙、钹、锣等打击乐器，鼓身多采用本地槐木制作，鼓面为牛皮，音质雄浑厚重。</li>
+            <li><strong>表演形式</strong>：表演时少则数人，多则上百人，阵型多变，动作刚劲有力，融合武术、舞蹈元素，体现“刚、猛、烈、壮”。</li>
+            <li><strong>代表曲牌</strong>：《大得胜》《小得胜》《十面埋伏》等。</li>
+        </ul>
+
+        <h3 style="color:#5a3e2b; margin-top:1rem; margin-left:10px;">3.3 传承现状</h3>
+        <ul>
+            <li>核心传承人多为中老年人，年轻一代断层明显</li>
+            <li>表演集中于节庆，日常传播渠道有限</li>
+            <li>传统口传心授效率低</li>
+            <li>缺乏系统化数字档案</li>
+        </ul>
+
+    </section>
+
+    <section class="research-section" id="section4">
+        <h2>四、数字赋能束鹿战鼓传承</h2>
+        <div class="digital-heritage">
+            <div class="digital-card">
+                <h3>4.1 数字化档案建设</h3>
+                <p>高清采集曲谱、视频、传承人访谈、工艺，建立永久数字档案库。</p>
+            </div>
+            <div class="digital-card">
+                <h3>4.2 线上传播推广</h3>
+                <p>短视频、VR、直播等形式，扩大年轻受众。</p>
+            </div>
+            <div class="digital-card">
+                <h3>4.3 数字化教学体系</h3>
+                <p>线上课程+AI动作识别，降低学习门槛。</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="research-section" id="section5">
+        <h2>五、调研结论与展望</h2>
+        <p>束鹿战鼓是冀韵文化重要载体。通过数字化赋能，可突破时空限制，让非遗在新时代焕发生机。未来持续深化“数字+非遗”，真正实现<strong>数字塑年韵，匠心传冀韵</strong>。</p>
+    </section>
+
+</div>
+
+<footer>
+    <p>束鹿战鼓非遗文化调研｜数字塑年韵 匠心传冀韵 © 2026</p>
+</footer>
+
+<script>
+    const modal = document.getElementById('imgModal');
+    const modalImg = document.getElementById('modalImg');
+
+    // 点击放大图片
+    function openImg(src) {
+        modalImg.src = src;
+        modal.classList.add('show');
+    }
+
+    modal.addEventListener('click', () => {
+        modal.classList.remove('show');
+    });
+
+    // 平滑滚动
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href');
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+                targetElement.scrollIntoView({
+                    behavior: 'smooth'
+                });
             }
         });
-    </script>
+    });
+
+    // 轮播核心功能
+    // 存储每个轮播的当前索引
+    const carouselStates = {
+        carousel1: 0,
+        carousel2: 0,
+        carousel3: 0
+    };
+
+    // 自动播放轮播
+    function autoPlayCarousel(carouselId) {
+        setInterval(() => {
+            moveCarousel(carouselId, 1);
+        }, 5000); // 5秒自动切换
+    }
+
+    // 初始化所有轮播自动播放
+    autoPlayCarousel('carousel1');
+    autoPlayCarousel('carousel2');
+    autoPlayCarousel('carousel3');
+
+    // 切换轮播图片
+    function moveCarousel(carouselId, direction) {
+        const carousel = document.getElementById(carouselId);
+        const slides = carousel.querySelector('.carousel-slides');
+        const slideCount = slides.querySelectorAll('.carousel-slide').length;
+        const indicators = carousel.querySelectorAll('.indicator-dot');
+        
+        // 更新当前索引
+        carouselStates[carouselId] = (carouselStates[carouselId] + direction + slideCount) % slideCount;
+        
+        // 移动轮播容器
+        slides.style.transform = `translateX(-${carouselStates[carouselId] * 100}%)`;
+        
+        // 更新指示器状态
+        indicators.forEach((dot, index) => {
+            dot.classList.toggle('active', index === carouselStates[carouselId]);
+        });
+    }
+
+    // 跳转到指定轮播页
+    function goToSlide(carouselId, index) {
+        const carousel = document.getElementById(carouselId);
+        const slides = carousel.querySelector('.carousel-slides');
+        const indicators = carousel.querySelectorAll('.indicator-dot');
+        
+        // 更新索引
+        carouselStates[carouselId] = index;
+        
+        // 移动轮播容器
+        slides.style.transform = `translateX(-${index * 100}%)`;
+        
+        // 更新指示器状态
+        indicators.forEach((dot, i) => {
+            dot.classList.toggle('active', i === index);
+        });
+    }
+</script>
+
 </body>
 </html>
