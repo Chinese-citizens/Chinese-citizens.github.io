@@ -140,7 +140,6 @@
             color: #5a3e2b;
         }
 
-        /* 图片展示 - 中式相框质感 (新增轮播样式) */
         .image-gallery {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -165,7 +164,6 @@
             border-color: #c89f62;
         }
 
-        /* 轮播容器样式 */
         .carousel-container {
             width: 100%;
             height: 220px;
@@ -173,14 +171,12 @@
             position: relative;
         }
 
-        /* 轮播图片列表 */
         .carousel-slides {
             display: flex;
             transition: transform 0.5s ease;
             height: 100%;
         }
 
-        /* 轮播单张图片 */
         .carousel-slide {
             flex: 0 0 100%;
             height: 100%;
@@ -193,7 +189,6 @@
             display: block;
         }
 
-        /* 轮播控制按钮 */
         .carousel-btn {
             position: absolute;
             top: 50%;
@@ -225,7 +220,6 @@
             right: 10px;
         }
 
-        /* 轮播指示器 */
         .carousel-indicators {
             position: absolute;
             bottom: 10px;
@@ -262,7 +256,6 @@
             border-top: 1px solid #f0e6d8;
         }
 
-        /* 传承人卡片 - 中式质感 */
         .inheritor-showcase {
             display: flex;
             flex-wrap: wrap;
@@ -307,7 +300,6 @@
             line-height: 1.6;
         }
 
-        /* 数据展示 - 中式底色 */
         .data-showcase {
             background-color: #faf0e1;
             border: 1px solid #e0d0b8;
@@ -337,7 +329,6 @@
             font-size: 1.1rem;
         }
 
-        /* 数字传承卡片 - 中式侧边栏 */
         .digital-heritage {
             display: flex;
             flex-wrap: wrap;
@@ -362,7 +353,6 @@
             letter-spacing: 1px;
         }
 
-        /* 点击放大图片样式 */
         .img-modal {
             position: fixed;
             top: 0;
@@ -392,7 +382,6 @@
             box-shadow: 0 0 30px rgba(255,255,255,0.2);
         }
 
-        /* 中式页脚 */
         footer {
             background: linear-gradient(135deg, #7a3d17, #9c5823);
             color: #fff9e8;
@@ -403,40 +392,185 @@
             letter-spacing: 1px;
         }
 
-        /* 响应式适配 */
-        @media (max-width: 768px) {
+        /* 响应式规则 - 分三个断点精细化适配 */
+        
+        /* 超小屏 (手机，小于 576px) */
+        @media (max-width: 575.98px) {
+            body {
+                padding-top: 55px;
+            }
+            .nav-container {
+                padding: 0 1rem;
+            }
+            .nav-list {
+                gap: 0.3rem;
+                padding: 0.4rem 0;
+            }
+            .nav-item a {
+                font-size: 0.8rem;
+                padding: 0.3rem 0.5rem;
+                letter-spacing: 0;
+            }
+            header {
+                padding: 1.2rem 0;
+            }
+            header h1 { 
+                font-size: 1.6rem;
+                letter-spacing: 1px;
+            }
+            header p {
+                font-size: 0.95rem;
+            }
+            .container { 
+                padding: 0.8rem; 
+            }
+            .research-section {
+                padding: 1rem;
+                margin-bottom: 1rem;
+                scroll-margin-top: 65px;
+            }
+            .research-section::before { 
+                display: none; 
+            }
+            .research-section h2 { 
+                margin-left: 0;
+                font-size: 1.4rem;
+                padding-bottom: 0.5rem;
+            }
+            .research-section p {
+                font-size: 0.95rem;
+                text-indent: 1.5em;
+            }
+            .research-section ul {
+                margin-left: 1.5rem;
+            }
+            .research-section li {
+                font-size: 0.9rem;
+            }
+            .image-gallery {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+                margin: 1.5rem 0;
+            }
+            .carousel-container {
+                height: 180px;
+            }
+            .carousel-btn {
+                width: 26px;
+                height: 26px;
+                font-size: 12px;
+            }
+            .indicator-dot {
+                width: 6px;
+                height: 6px;
+            }
+            .indicator-dot.active {
+                width: 15px;
+            }
+            .gallery-caption {
+                padding: 0.8rem;
+                font-size: 0.9rem;
+            }
+            .digital-heritage {
+                gap: 1rem;
+            }
+            .digital-card {
+                min-width: 100%;
+                padding: 1rem;
+            }
+            .digital-card h3 {
+                font-size: 1.2rem;
+            }
+            .data-chart { 
+                height: 180px; 
+                font-size: 0.95rem;
+            }
+            footer {
+                padding: 1rem 0;
+                font-size: 0.9rem;
+            }
+        }
+
+        /* 小屏 (平板竖屏，576px - 767.98px) */
+        @media (min-width: 576px) and (max-width: 767.98px) {
             body {
                 padding-top: 60px;
             }
             .nav-list {
-                gap: 0.5rem;
-                padding: 0.5rem 0;
+                gap: 0.8rem;
             }
             .nav-item a {
                 font-size: 0.9rem;
-                padding: 0.4rem 0.6rem;
+                padding: 0.4rem 0.7rem;
             }
-            header h1 { font-size: 2rem; }
-            .container { padding: 1rem; }
-            .data-chart { height: 200px; }
-            .research-section::before { display: none; }
-            .research-section h2 { margin-left: 0; }
+            header h1 { 
+                font-size: 1.9rem; 
+            }
+            .container { 
+                padding: 1.2rem; 
+            }
             .research-section {
+                padding: 1.5rem;
                 scroll-margin-top: 70px;
             }
-            /* 移动端轮播按钮调整 */
+            .research-section h2 {
+                font-size: 1.6rem;
+            }
+            .image-gallery {
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                gap: 1.2rem;
+            }
+            .carousel-container {
+                height: 200px;
+            }
             .carousel-btn {
                 width: 30px;
                 height: 30px;
                 font-size: 14px;
+            }
+            .digital-card {
+                min-width: 250px;
+            }
+            .data-chart { 
+                height: 220px; 
+            }
+        }
+
+        /* 中屏 (平板横屏/小电脑，768px - 991.98px) */
+        @media (min-width: 768px) and (max-width: 991.98px) {
+            .nav-container {
+                padding: 0 1.5rem;
+            }
+            .container {
+                padding: 1.5rem;
+            }
+            .research-section {
+                padding: 1.8rem;
+            }
+            .image-gallery {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .carousel-container {
+                height: 210px;
+            }
+        }
+
+        /* 大屏 (桌面端，大于 1200px) - 优化大屏显示 */
+        @media (min-width: 1200px) {
+            .container {
+                max-width: 1400px;
+            }
+            .image-gallery {
+                grid-template-columns: repeat(3, 1fr);
+            }
+            .carousel-container {
+                height: 250px;
             }
         }
     </style>
 </head>
 
 <body>
-
-<!-- 目录导航栏 -->
 <nav class="nav-menu">
     <div class="nav-container">
         <ul class="nav-list">
@@ -449,7 +583,6 @@
     </div>
 </nav>
 
-<!-- 图片放大遮罩 -->
 <div class="img-modal" id="imgModal">
     <img id="modalImg" src="">
 </div>
@@ -460,7 +593,6 @@
 </header>
 
 <div class="container">
-
     <section class="research-section" id="section1">
         <h2>一、调研背景与目的</h2>
         <p>束鹿战鼓（辛集战鼓）是河北省省级非物质文化遗产，作为冀中平原最具代表性的民间鼓乐之一，承载着冀地人民的精神风貌和文化记忆。本次调研以"数字塑年韵，匠心传冀韵"为核心，旨在：</p>
@@ -472,11 +604,9 @@
         </ul>
     </section>
 
-    <!-- 视觉展示区域（核心修改部分） -->
     <section class="research-section" id="section2">
         <h2>二、束鹿战鼓视觉调研展示</h2>
         <div class="image-gallery">
-            <!-- 第一个轮播项：束鹿战鼓表演现场 -->
             <div class="gallery-item">
                 <div class="carousel-container" id="carousel1">
                     <div class="carousel-slides">
@@ -501,7 +631,6 @@
                 <div class="gallery-caption">束鹿战鼓节庆表演现场</div>
             </div>
 
-            <!-- 第二个轮播项：束鹿战鼓制作工艺 -->
             <div class="gallery-item">
                 <div class="carousel-container" id="carousel2">
                     <div class="carousel-slides">
@@ -526,7 +655,6 @@
                 <div class="gallery-caption">束鹿战鼓传统制作工艺</div>
             </div>
 
-            <!-- 第三个轮播项：束鹿战鼓曲谱 -->
             <div class="gallery-item">
                 <div class="carousel-container" id="carousel3">
                     <div class="carousel-slides">
@@ -548,7 +676,7 @@
                         <span class="indicator-dot" onclick="goToSlide('carousel3', 2)"></span>
                     </div>
                 </div>
-                <div class="gallery-caption">战鼓经典鼓谱</div>
+                <div class="gallery-caption">战鼓经典曲谱</div>
             </div>
         </div>
     </section>
@@ -572,7 +700,6 @@
             <li>传统口传心授效率低</li>
             <li>缺乏系统化数字档案</li>
         </ul>
-
     </section>
 
     <section class="research-section" id="section4">
@@ -597,7 +724,6 @@
         <h2>五、调研结论与展望</h2>
         <p>束鹿战鼓是冀韵文化重要载体。通过数字化赋能，可突破时空限制，让非遗在新时代焕发生机。未来持续深化“数字+非遗”，真正实现<strong>数字塑年韵，匠心传冀韵</strong>。</p>
     </section>
-
 </div>
 
 <footer>
@@ -608,7 +734,6 @@
     const modal = document.getElementById('imgModal');
     const modalImg = document.getElementById('modalImg');
 
-    // 点击放大图片
     function openImg(src) {
         modalImg.src = src;
         modal.classList.add('show');
@@ -618,7 +743,6 @@
         modal.classList.remove('show');
     });
 
-    // 平滑滚动
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
@@ -632,63 +756,50 @@
         });
     });
 
-    // 轮播核心功能
-    // 存储每个轮播的当前索引
     const carouselStates = {
         carousel1: 0,
         carousel2: 0,
         carousel3: 0
     };
 
-    // 自动播放轮播
     function autoPlayCarousel(carouselId) {
         setInterval(() => {
             moveCarousel(carouselId, 1);
-        }, 5000); // 5秒自动切换
+        }, 5000);
     }
 
-    // 初始化所有轮播自动播放
     autoPlayCarousel('carousel1');
     autoPlayCarousel('carousel2');
     autoPlayCarousel('carousel3');
 
-    // 切换轮播图片
     function moveCarousel(carouselId, direction) {
         const carousel = document.getElementById(carouselId);
         const slides = carousel.querySelector('.carousel-slides');
         const slideCount = slides.querySelectorAll('.carousel-slide').length;
         const indicators = carousel.querySelectorAll('.indicator-dot');
         
-        // 更新当前索引
         carouselStates[carouselId] = (carouselStates[carouselId] + direction + slideCount) % slideCount;
         
-        // 移动轮播容器
         slides.style.transform = `translateX(-${carouselStates[carouselId] * 100}%)`;
         
-        // 更新指示器状态
         indicators.forEach((dot, index) => {
             dot.classList.toggle('active', index === carouselStates[carouselId]);
         });
     }
 
-    // 跳转到指定轮播页
     function goToSlide(carouselId, index) {
         const carousel = document.getElementById(carouselId);
         const slides = carousel.querySelector('.carousel-slides');
         const indicators = carousel.querySelectorAll('.indicator-dot');
         
-        // 更新索引
         carouselStates[carouselId] = index;
         
-        // 移动轮播容器
         slides.style.transform = `translateX(-${index * 100}%)`;
         
-        // 更新指示器状态
         indicators.forEach((dot, i) => {
             dot.classList.toggle('active', i === index);
         });
     }
 </script>
-
 </body>
 </html>
